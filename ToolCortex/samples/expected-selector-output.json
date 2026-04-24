@@ -1,0 +1,54 @@
+[
+  {
+    "incidentSummary": "Checkout API failing intermittently | runtime failure | intermittent API failure | high",
+    "recommendedTools": [
+      {
+        "toolName": "get_service_logs",
+        "sourceType": "custom",
+        "score": 1.0,
+        "confidence": 1.0,
+        "reason": "base intent match: logs | specificity preference: direct operational/specialized tool | runtime failure sensitivity: strong boost for log analysis | preferred scenarios matched: 4"
+      },
+      {
+        "toolName": "get_recent_deployments",
+        "sourceType": "custom",
+        "score": 0.952,
+        "confidence": 0.9688,
+        "reason": "base intent match: deployments | specificity preference: direct operational/specialized tool | deployment sensitivity: strong boost for deployment investigation | preferred scenarios matched: 2"
+      },
+      {
+        "toolName": "get_service_health",
+        "sourceType": "custom",
+        "score": 0.915,
+        "confidence": 0.94475,
+        "reason": "base intent match: health | specificity preference: direct operational/specialized tool | runtime failure sensitivity: stability-check boost for health validation | preferred scenarios matched: 3"
+      }
+    ]
+  },
+  {
+    "incidentSummary": "Need to inspect service contract and related repo details | investigation | unclear integration issue | medium",
+    "recommendedTools": [
+      {
+        "toolName": "api_schema_inspector",
+        "sourceType": "external",
+        "score": 1.0,
+        "confidence": 1.0,
+        "reason": "base intent match: schema | specificity preference: direct operational/specialized tool | contract/schema sensitivity: strong boost for schema inspection | preferred scenarios matched: 2"
+      },
+      {
+        "toolName": "github_repo_search",
+        "sourceType": "external",
+        "score": 0.7175,
+        "confidence": 0.816375,
+        "reason": "base intent match: repo-search, docs | specificity preference: generic helper tool | contract/schema sensitivity: secondary boost for repo/docs investigation | preferred scenarios matched: 3"
+      },
+      {
+        "toolName": "get_service_dependencies",
+        "sourceType": "custom",
+        "score": 0.678,
+        "confidence": 0.7907,
+        "reason": "base intent match: dependencies | specificity preference: direct operational/specialized tool | preferred scenarios matched: 2"
+      }
+    ]
+  }
+]

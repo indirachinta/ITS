@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Checkout API failing intermittently",
+    "summary": "Customers report random failures during checkout. Errors increased after a recent deployment.",
+    "affectedService": "checkout-service",
+    "incidentType": "runtime failure",
+    "symptomType": "intermittent API failure",
+    "severity": "high"
+  },
+  {
+    "title": "Need to inspect service contract and related repo details",
+    "summary": "Team is unsure whether the issue is caused by API contract mismatch or documentation gap.",
+    "affectedService": "order-service",
+    "incidentType": "investigation",
+    "symptomType": "unclear integration issue",
+    "severity": "medium"
+  }
+]

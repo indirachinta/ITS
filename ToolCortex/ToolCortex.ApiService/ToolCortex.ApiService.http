@@ -1,0 +1,16 @@
+@ToolCortex.ApiService_HostAddress = http://localhost:5041
+
+POST {{ToolCortex.ApiService_HostAddress}}/mcp/selecttools
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Checkout API failing intermittently",
+  "summary": "Customers report random failures during checkout. Errors increased after a recent deployment.",
+  "affectedService": "checkout-service",
+  "incidentType": "runtime failure",
+  "symptomType": "intermittent API failure",
+  "severity": "high"
+}
+
+###

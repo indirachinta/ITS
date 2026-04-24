@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ToolCortex.ApiService/ToolCortex.ApiService.csproj" Id="5cac0969-5577-4ed3-8e53-82f20a5bee93" />
+  <Project Path="ToolCortex.Application/ToolCortex.Application.csproj" />
+  <Project Path="ToolCortex.Domain/ToolCortex.Domain.csproj" />
+  <Project Path="ToolCortex.Infrastructure/ToolCortex.Infrastructure.csproj" />
+  <Project Path="ToolCortex.McpAdapter/ToolCortex.McpAdapter.csproj" />
+</Solution>
