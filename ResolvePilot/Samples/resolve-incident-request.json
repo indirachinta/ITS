@@ -1,0 +1,7 @@
+{
+  "title": "Checkout API error rate increased after deployment",
+  "summary": "The checkout API began returning elevated 500 responses shortly after the latest production deployment.",
+  "affectedService": "checkout-api",
+  "severity": "sev2",
+  "mode": "fast"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "fastPath": {
+    "maxToolExecutions": 2,
+    "minimumConfidence": 0.75
+  },
+  "deepPath": {
+    "triggerWhen": [
+      "multiple_services_impacted",
+      "low_confidence",
+      "missing_evidence",
+      "requires_branching_investigation"
+    ]
+  }
+}

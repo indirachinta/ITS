@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/shared/">
+    <Project Path="shared/IncidentTools.Core/IncidentTools.Core.csproj" />
+  </Folder>
+  <Project Path="ResolvePilot.Api/ResolvePilot.Api.csproj" />
+  <Project Path="ResolvePilot.Application/ResolvePilot.Application.csproj" />
+  <Project Path="ResolvePilot.Domain/ResolvePilot.Domain.csproj" />
+  <Project Path="ResolvePilot.Infrastructure/ResolvePilot.Infrastructure.csproj" />
+</Solution>

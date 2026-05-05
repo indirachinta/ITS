@@ -1,0 +1,69 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ResolvePilot.Infrastructure/1.0.0": {
+        "dependencies": {
+          "IncidentTools.Core": "1.0.0",
+          "ResolvePilot.Application": "1.0.0"
+        },
+        "runtime": {
+          "ResolvePilot.Infrastructure.dll": {}
+        }
+      },
+      "IncidentTools.Core/1.0.0": {
+        "runtime": {
+          "IncidentTools.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ResolvePilot.Application/1.0.0": {
+        "dependencies": {
+          "ResolvePilot.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ResolvePilot.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ResolvePilot.Domain/1.0.0": {
+        "runtime": {
+          "ResolvePilot.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ResolvePilot.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IncidentTools.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ResolvePilot.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ResolvePilot.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

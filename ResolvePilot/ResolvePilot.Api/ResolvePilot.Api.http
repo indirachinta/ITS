@@ -1,0 +1,15 @@
+@ResolvePilot.Api_HostAddress = http://localhost:5271
+
+POST {{ResolvePilot.Api_HostAddress}}/api/incidents/resolve
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Checkout API error rate increased after deployment",
+  "summary": "The checkout API began returning elevated 500 responses shortly after the latest production deployment.",
+  "affectedService": "checkout-api",
+  "severity": "sev2",
+  "mode": "fast"
+}
+
+###

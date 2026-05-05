@@ -1,0 +1,13 @@
+{
+  "version": "v1",
+  "resolutionRules": {
+    "deployment_related_failure": [
+      "check recent deployments",
+      "check service logs",
+      "recommend rollback or hotfix when evidence is strong"
+    ],
+    "unknown": [
+      "recommend deeper investigation"
+    ]
+  }
+}

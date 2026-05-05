@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "supportedIncidentTypes": [
+    "deployment_related_failure",
+    "single_service_runtime_failure",
+    "dependency_failure",
+    "data_issue",
+    "unknown"
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ResolvePilot.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/incidents/resolve": {
+      "post": {
+        "tags": [
+          "ResolvePilot.Api"
+        ],
+        "summary": "Resolve an incident",
+        "description": "Returns a structured mock FAST resolution response for the supplied incident request.",
+        "operationId": "ResolveIncident",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolutionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "IncidentRequest": {
+        "required": [
+          "affectedService",
+          "mode",
+          "severity",
+          "summary",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          },
+          "affectedService": {
+            "type": "string",
+            "nullable": true
+          },
+          "severity": {
+            "type": "string",
+            "nullable": true
+          },
+          "mode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResolutionResponse": {
+        "required": [
+          "affectedService",
+          "confidence",
+          "incidentIntent",
+          "reasoning",
+          "recommendedAction",
+          "resolutionPath",
+          "resolutionSummary",
+          "toolsExecuted",
+          "workflowRequired"
+        ],
+        "type": "object",
+        "properties": {
+          "incidentIntent": {
+            "type": "string",
+            "nullable": true
+          },
+          "affectedService": {
+            "type": "string",
+            "nullable": true
+          },
+          "resolutionPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "toolsExecuted": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "resolutionSummary": {
+            "type": "string",
+            "nullable": true
+          },
+          "recommendedAction": {
+            "type": "string",
+            "nullable": true
+          },
+          "confidence": {
+            "type": "number",
+            "format": "double"
+          },
+          "reasoning": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "workflowRequired": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "ResolvePilot.Api"
+    }
+  ]
+}

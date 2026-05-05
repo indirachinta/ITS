@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "requiredFields": [
+    "incidentIntent",
+    "affectedService",
+    "resolutionPath",
+    "toolsExecuted",
+    "resolutionSummary",
+    "recommendedAction",
+    "confidence",
+    "reasoning",
+    "workflowRequired"
+  ]
+}
