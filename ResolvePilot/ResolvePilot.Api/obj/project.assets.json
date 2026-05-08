@@ -2,6 +2,36 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Microsoft.Extensions.AI.Abstractions/10.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Extensions.AI.OpenAI/10.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.4.1",
+          "OpenAI": "2.9.1"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.AI.OpenAI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.AI.OpenAI.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
         "type": "package",
         "build": {
@@ -23,6 +53,22 @@
         "runtime": {
           "lib/net8.0/Microsoft.OpenApi.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "OpenAI/2.9.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ClientModel": "1.9.0"
+        },
+        "compile": {
+          "lib/net10.0/OpenAI.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/OpenAI.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -92,6 +138,48 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "System.ClientModel/1.9.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory.Data": "10.0.1"
+        },
+        "compile": {
+          "lib/net10.0/System.ClientModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.ClientModel.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory.Data/10.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.Memory.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.Memory.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
+      "IncidentTools.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/IncidentTools.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IncidentTools.Core.dll": {}
+        }
+      },
       "ResolvePilot.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -114,10 +202,71 @@
         "runtime": {
           "bin/placeholder/ResolvePilot.Domain.dll": {}
         }
+      },
+      "ResolvePilot.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "IncidentTools.Core": "1.0.0",
+          "Microsoft.Extensions.AI.OpenAI": "10.4.1",
+          "ResolvePilot.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ResolvePilot.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ResolvePilot.Infrastructure.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Microsoft.Extensions.AI.Abstractions/10.4.1": {
+      "sha512": "ZxhU/wg9BOc3ohibhLl18toPLWm96ysQoE+3OhCgrZ0TUPZd7bsUmGteeatz08yweyuPIEhtyUzEZTF+3bMWEQ==",
+      "type": "package",
+      "path": "microsoft.extensions.ai.abstractions/10.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.AI.Abstractions.xml",
+        "lib/net462/Microsoft.Extensions.AI.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.AI.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.AI.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.AI.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.AI.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.AI.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.AI.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.AI.Abstractions.xml",
+        "microsoft.extensions.ai.abstractions.10.4.1.nupkg.sha512",
+        "microsoft.extensions.ai.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.AI.OpenAI/10.4.1": {
+      "sha512": "C+xo+ds4PxSzTEywLcM0hbJJboEuLT5na/Q49rMNi3Y0hsoBuMXIZCvWXOyvNXunvngOwZYvkicEod/g8Gll6w==",
+      "type": "package",
+      "path": "microsoft.extensions.ai.openai/10.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "lib/net10.0/Microsoft.Extensions.AI.OpenAI.dll",
+        "lib/net10.0/Microsoft.Extensions.AI.OpenAI.xml",
+        "lib/net462/Microsoft.Extensions.AI.OpenAI.dll",
+        "lib/net462/Microsoft.Extensions.AI.OpenAI.xml",
+        "lib/net8.0/Microsoft.Extensions.AI.OpenAI.dll",
+        "lib/net8.0/Microsoft.Extensions.AI.OpenAI.xml",
+        "lib/net9.0/Microsoft.Extensions.AI.OpenAI.dll",
+        "lib/net9.0/Microsoft.Extensions.AI.OpenAI.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.AI.OpenAI.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.AI.OpenAI.xml",
+        "microsoft.extensions.ai.openai.10.4.1.nupkg.sha512",
+        "microsoft.extensions.ai.openai.nuspec"
+      ]
+    },
     "Microsoft.Extensions.ApiDescription.Server/10.0.0": {
       "sha512": "NCWCGiwRwje8773yzPQhvucYnnfeR+ZoB1VRIrIMp4uaeUNw7jvEPHij3HIbwCDuNCrNcphA00KSAR9yD9qmbg==",
       "type": "package",
@@ -396,6 +545,26 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "OpenAI/2.9.1": {
+      "sha512": "KPTFYEt1EhrPeIZXGBE+DlutFEpMo/RspqSdUJ3p6pMqsw3NeGJcIja/K0He1j9KyRq8ASfzBgp2biWbNUGnFA==",
+      "type": "package",
+      "path": "openai/2.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "OpenAI.png",
+        "README.md",
+        "lib/net10.0/OpenAI.dll",
+        "lib/net10.0/OpenAI.xml",
+        "lib/net8.0/OpenAI.dll",
+        "lib/net8.0/OpenAI.xml",
+        "lib/netstandard2.0/OpenAI.dll",
+        "lib/netstandard2.0/OpenAI.xml",
+        "openai.2.9.1.nupkg.sha512",
+        "openai.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/10.1.7": {
       "sha512": "vgef8DPT411JU5JjHiDbr0WOxsIVuAvegPGtqmm4Na4JRl/264dfBJcGkiPHsAr5P+Vda+qN1rZKRtBl1rF9aA==",
       "type": "package",
@@ -473,6 +642,63 @@
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
+    "System.ClientModel/1.9.0": {
+      "sha512": "1wdwKtMMMEFEYsxJmtrOd3G+7zVOVO3MlVZAsbKv9H0PnIx6J27fYAarMn0eQS0vKJPQL018DOb7YRK1O97p0A==",
+      "type": "package",
+      "path": "system.clientmodel/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGELOG.md",
+        "DotNetPackageIcon.png",
+        "README.md",
+        "analyzers/dotnet/cs/System.ClientModel.SourceGeneration.dll",
+        "lib/net10.0/System.ClientModel.dll",
+        "lib/net10.0/System.ClientModel.xml",
+        "lib/net8.0/System.ClientModel.dll",
+        "lib/net8.0/System.ClientModel.xml",
+        "lib/net9.0/System.ClientModel.dll",
+        "lib/net9.0/System.ClientModel.xml",
+        "lib/netstandard2.0/System.ClientModel.dll",
+        "lib/netstandard2.0/System.ClientModel.xml",
+        "system.clientmodel.1.9.0.nupkg.sha512",
+        "system.clientmodel.nuspec"
+      ]
+    },
+    "System.Memory.Data/10.0.1": {
+      "sha512": "BZC4mhdL569AXV56ep9YO6ShjhxFXGP7SwVX0Bc/e0dJPWnS6aBEXZJXqh64RVx8HquqWHkJUINBydLRQ1yq0g==",
+      "type": "package",
+      "path": "system.memory.data/10.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Memory.Data.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Memory.Data.targets",
+        "lib/net10.0/System.Memory.Data.dll",
+        "lib/net10.0/System.Memory.Data.xml",
+        "lib/net462/System.Memory.Data.dll",
+        "lib/net462/System.Memory.Data.xml",
+        "lib/net8.0/System.Memory.Data.dll",
+        "lib/net8.0/System.Memory.Data.xml",
+        "lib/net9.0/System.Memory.Data.dll",
+        "lib/net9.0/System.Memory.Data.xml",
+        "lib/netstandard2.0/System.Memory.Data.dll",
+        "lib/netstandard2.0/System.Memory.Data.xml",
+        "system.memory.data.10.0.1.nupkg.sha512",
+        "system.memory.data.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "IncidentTools.Core/1.0.0": {
+      "type": "project",
+      "path": "../shared/IncidentTools.Core/IncidentTools.Core.csproj",
+      "msbuildProject": "../shared/IncidentTools.Core/IncidentTools.Core.csproj"
+    },
     "ResolvePilot.Application/1.0.0": {
       "type": "project",
       "path": "../ResolvePilot.Application/ResolvePilot.Application.csproj",
@@ -482,11 +708,17 @@
       "type": "project",
       "path": "../ResolvePilot.Domain/ResolvePilot.Domain.csproj",
       "msbuildProject": "../ResolvePilot.Domain/ResolvePilot.Domain.csproj"
+    },
+    "ResolvePilot.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../ResolvePilot.Infrastructure/ResolvePilot.Infrastructure.csproj",
+      "msbuildProject": "../ResolvePilot.Infrastructure/ResolvePilot.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "ResolvePilot.Application >= 1.0.0",
+      "ResolvePilot.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 10.1.7"
     ]
   },
@@ -497,11 +729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Api\\ResolvePilot.Api.csproj",
+      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Api\\ResolvePilot.Api.csproj",
       "projectName": "ResolvePilot.Api",
-      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Api\\ResolvePilot.Api.csproj",
+      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Api\\ResolvePilot.Api.csproj",
       "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Api\\obj\\",
+      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -522,8 +754,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
-              "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj"
+            "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
+              "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj"
+            },
+            "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj"
             }
           }
         }

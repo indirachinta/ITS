@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {}
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
         "projectName": "IncidentTools.Core",
-        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
         "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
+        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

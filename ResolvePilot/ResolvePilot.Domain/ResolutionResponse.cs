@@ -1,5 +1,7 @@
 namespace ResolvePilot.Domain;
 
+using ResolvePilot.Domain.ToolCortex;
+
 public sealed record ResolutionResponse
 {
     public required string IncidentIntent { get; init; }
@@ -7,6 +9,8 @@ public sealed record ResolutionResponse
     public required string AffectedService { get; init; }
 
     public required string ResolutionPath { get; init; }
+
+    public required IReadOnlyList<RecommendedTool> RecommendedTools { get; init; }
 
     public required IReadOnlyList<string> ToolsExecuted { get; init; }
 
@@ -21,4 +25,6 @@ public sealed record ResolutionResponse
     public required bool WorkflowRequired { get; init; }
 
     public InvestigationFindings? InvestigationFindings { get; set; }
+
+    public required string DecisionSource { get; init; }
 }

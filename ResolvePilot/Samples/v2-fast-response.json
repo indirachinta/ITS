@@ -1,0 +1,38 @@
+{
+    "incidentIntent": "deployment_related_failure",
+    "affectedService": "checkout-service",
+    "resolutionPath": "FAST",
+    "recommendedTools": [
+      {
+        "toolName": "get_recent_deployments",
+        "score": 92,
+        "confidence": 0.88,
+        "source": "custom-enterprise-tool",
+        "reasoning": [
+          "Incident started after recent deployment.",
+          "Deployment timeline can confirm causality."
+        ]
+      },
+      {
+        "toolName": "get_service_logs",
+        "score": 87,
+        "confidence": 0.84,
+        "source": "custom-enterprise-tool",
+        "reasoning": [
+          "Runtime failures require service log inspection."
+        ]
+      }
+    ],
+    "toolsExecuted": [],
+    "resolutionSummary": "This incident appears suitable for FAST resolution using simple tool execution in V3.",
+    "recommendedAction": "Proceed to FAST tool execution in V3.",
+    "confidence": 0.82,
+    "reasoning": [
+      "Incident mentions recent deployment.",
+      "Affected service appears isolated.",
+      "ToolCortex recommends deployment and log tools with high confidence."
+    ],
+    "workflowRequired": false,
+    "investigationFindings": null,
+    "decisionSource": "runtime-spec-governed-ai-github-models"
+  }

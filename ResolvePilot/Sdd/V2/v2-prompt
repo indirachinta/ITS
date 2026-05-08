@@ -1,0 +1,69 @@
+We are implementing V2 of ResolvePilot using Spec-Driven Development.
+
+V1 already exists. Do not recreate the solution.
+
+Read these files first:
+- Sdd/v2-decision-orchestration-spec.md
+- Sdd/v2-ai-layer-spec.md
+- Sdd/v2-toolcortex-contract-spec.md
+- Sdd/v2-acceptance-criteria.md
+- Specs/*.json
+- Samples/toolcortex-request.json
+- Samples/toolcortex-response.json
+- Samples/v2-fast-request.json
+- Samples/v2-deep-request.json
+- Samples/v2-fast-response.json
+- Samples/v2-deep-response.json
+
+V2 goal:
+Move ResolvePilot from static mock response to real LLM-based, spec-governed decision orchestration.
+
+Implement only V2 scope.
+
+Required implementation:
+1. Runtime spec loading from /Specs.
+2. PromptBuilder that combines:
+   - incident request
+   - runtime specs
+   - required structured JSON output contract
+3. Real AI decision service using Microsoft.Extensions.AI.
+4. Inject IChatClient through dependency injection.
+5. Configure GitHub Models as the first provider.
+6. Keep model provider swappable.
+7. Parse AI response into AiIncidentDecision.
+8. Add safe fallback for invalid JSON or model failure.
+9. Add ToolCortex request/response domain models.
+10. Add ToolCortex client abstraction.
+11. Add mock ToolCortex client using the sample contract.
+12. Add PathDecisionService for FAST vs DEEP.
+13. Update IncidentResolutionEngine to orchestrate:
+    specs → prompt → AI decision → ToolCortex recommendations → path decision → response.
+14. Response should include:
+    - incidentIntent
+    - affectedService
+    - resolutionPath
+    - recommendedTools
+    - toolsExecuted as empty list
+    - resolutionSummary
+    - recommendedAction
+    - confidence
+    - reasoning
+    - workflowRequired
+    - investigationFindings
+    - decisionSource
+
+Important constraints:
+- Do not execute tools in V2.
+- Do not implement LangGraph.
+- Do not implement Component 3.
+- Do not duplicate ToolCortex scoring logic.
+- Do not hardcode all behavior when it should come from runtime specs.
+- Do not commit secrets.
+- Keep IncidentTools.Core reserved for V3 shared tool execution.
+
+After implementation, summarize:
+- files changed
+- how each V2 acceptance criterion is satisfied
+- how Microsoft.Extensions.AI keeps the AI layer model-agnostic
+- how GitHub Models is configured
+- what remains for V3

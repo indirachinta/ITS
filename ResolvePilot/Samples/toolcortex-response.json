@@ -1,0 +1,19 @@
+{
+    "incidentSummary": "Checkout API failing intermittently | runtime_failure | intermittent_api_failure | high",
+    "recommendedTools": [
+      {
+        "toolName": "get_service_logs",
+        "sourceType": "Custom",
+        "score": 0.97,
+        "confidence": 0.98,
+        "reason": "Strong match for runtime failure and intermittent error analysis"
+      }
+    ],
+    "rejectedTools": [
+      {
+        "toolName": "fetch_docs_search",
+        "sourceType": "External",
+        "reason": "Limited direct alignment with the primary investigation intent"
+      }
+    ]
+  }

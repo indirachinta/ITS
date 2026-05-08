@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
       "projectName": "ResolvePilot.Domain",
-      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
+      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
       "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ResolvePilot\\ResolvePilot.Domain\\obj\\",
+      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

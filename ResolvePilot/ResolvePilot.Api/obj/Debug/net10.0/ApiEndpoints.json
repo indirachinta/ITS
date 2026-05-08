@@ -1,10 +1,10 @@
 [
   {
-    "ContainingType": "Program\u002B\u003C\u003Ec",
-    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
+    "ContainingType": "ResolvePilot.Api.Controllers.IncidentsController",
+    "Method": "ResolveAsync",
     "RelativePath": "api/incidents/resolve",
     "HttpMethod": "POST",
-    "IsController": false,
+    "IsController": true,
     "Order": 0,
     "Parameters": [
       {
@@ -17,13 +17,12 @@
       {
         "Type": "ResolvePilot.Domain.ResolutionResponse",
         "MediaTypes": [
-          "application/json"
+          "text/plain",
+          "application/json",
+          "text/json"
         ],
         "StatusCode": 200
       }
-    ],
-    "EndpointName": "ResolveIncident",
-    "Description": "Returns a structured mock FAST resolution response for the supplied incident request.",
-    "Summary": "Resolve an incident"
+    ]
   }
 ]

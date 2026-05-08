@@ -1,0 +1,37 @@
+{
+    "incidentIntent": "dependency_failure",
+    "affectedService": "checkout-service",
+    "resolutionPath": "DEEP",
+    "recommendedTools": [
+      {
+        "toolName": "get_service_health",
+        "score": 91,
+        "confidence": 0.86,
+        "source": "external-mcp-tool",
+        "reasoning": [
+          "Multiple dependencies may be degraded."
+        ]
+      },
+      {
+        "toolName": "get_service_dependencies",
+        "score": 88,
+        "confidence": 0.84,
+        "source": "custom-enterprise-tool",
+        "reasoning": [
+          "Dependency chain must be inspected."
+        ]
+      }
+    ],
+    "toolsExecuted": [],
+    "resolutionSummary": "This incident requires deeper multi-step investigation before confident resolution.",
+    "recommendedAction": "Route to Component 3 LangGraph investigation in future scope.",
+    "confidence": 0.68,
+    "reasoning": [
+      "Incident spans payment and inventory dependencies.",
+      "Failures are intermittent.",
+      "Multiple systems may be involved."
+    ],
+    "workflowRequired": true,
+    "investigationFindings": null,
+    "decisionSource": "runtime-spec-governed-ai-github-models"
+  }

@@ -8,26 +8,42 @@
     "/api/incidents/resolve": {
       "post": {
         "tags": [
-          "ResolvePilot.Api"
+          "Incidents"
         ],
-        "summary": "Resolve an incident",
-        "description": "Returns a structured mock FAST resolution response for the supplied incident request.",
-        "operationId": "ResolveIncident",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/IncidentRequest"
               }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncidentRequest"
+              }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
             "description": "OK",
             "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolutionResponse"
+                }
+              },
               "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResolutionResponse"
+                }
+              },
+              "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResolutionResponse"
                 }
@@ -43,7 +59,6 @@
       "IncidentRequest": {
         "required": [
           "affectedService",
-          "mode",
           "severity",
           "summary",
           "title"
@@ -67,19 +82,85 @@
             "nullable": true
           },
           "mode": {
+            "$ref": "#/components/schemas/ResolutionMode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvestigationFindings": {
+        "type": "object",
+        "properties": {
+          "workflowName": {
             "type": "string",
+            "nullable": true
+          },
+          "rootCauseHypothesis": {
+            "type": "string",
+            "nullable": true
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
+      "RecommendedTool": {
+        "required": [
+          "confidence",
+          "reasoning",
+          "score",
+          "source",
+          "toolName"
+        ],
+        "type": "object",
+        "properties": {
+          "toolName": {
+            "type": "string",
+            "nullable": true
+          },
+          "score": {
+            "type": "number",
+            "format": "double"
+          },
+          "confidence": {
+            "type": "number",
+            "format": "double"
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "reasoning": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResolutionMode": {
+        "enum": [
+          "Auto",
+          "Fast",
+          "Deep"
+        ],
+        "type": "string"
+      },
       "ResolutionResponse": {
         "required": [
           "affectedService",
           "confidence",
+          "decisionSource",
           "incidentIntent",
           "reasoning",
           "recommendedAction",
+          "recommendedTools",
           "resolutionPath",
           "resolutionSummary",
           "toolsExecuted",
@@ -97,6 +178,13 @@
           },
           "resolutionPath": {
             "type": "string",
+            "nullable": true
+          },
+          "recommendedTools": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RecommendedTool"
+            },
             "nullable": true
           },
           "toolsExecuted": {
@@ -127,6 +215,13 @@
           },
           "workflowRequired": {
             "type": "boolean"
+          },
+          "investigationFindings": {
+            "$ref": "#/components/schemas/InvestigationFindings"
+          },
+          "decisionSource": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -135,7 +230,7 @@
   },
   "tags": [
     {
-      "name": "ResolvePilot.Api"
+      "name": "Incidents"
     }
   ]
 }

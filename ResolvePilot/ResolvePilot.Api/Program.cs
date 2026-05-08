@@ -1,5 +1,6 @@
+using System.Text.Json.Serialization;
 using ResolvePilot.Application;
-using ResolvePilot.Domain;
+using ResolvePilot.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,14 @@ builder.Logging.AddConsole();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IIncidentResolutionEngine, IncidentResolutionEngine>();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
+builder.Services.AddResolvePilotApplication();
+builder.Services.AddResolvePilotInfrastructure(builder.Configuration, builder.Environment.ContentRootPath);
 
 var app = builder.Build();
 
@@ -17,21 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-// TODO Day 2: Register infrastructure services such as RuntimeSpecLoader,
-// ToolCortexClient, and future LLM decision service.
 
-app.MapPost("/api/incidents/resolve", (
-    IncidentRequest request,
-    IIncidentResolutionEngine resolutionEngine) =>
-{
-    ResolutionResponse response = resolutionEngine.Resolve(request);
-
-    return Results.Ok(response);
-})
-.WithName("ResolveIncident")
-.WithSummary("Resolve an incident")
-.WithDescription("Returns a structured mock FAST resolution response for the supplied incident request.")
-.Accepts<IncidentRequest>("application/json")
-.Produces<ResolutionResponse>(StatusCodes.Status200OK);
+app.MapControllers();
 
 app.Run();

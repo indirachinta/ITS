@@ -4,5 +4,5 @@ namespace ResolvePilot.Application;
 
 public interface IIncidentResolutionEngine
 {
-    ResolutionResponse Resolve(IncidentRequest request);
+    Task<ResolutionResponse> ResolveAsync(IncidentRequest request, CancellationToken cancellationToken = default);
 }

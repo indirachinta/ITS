@@ -1,0 +1,7 @@
+{
+    "title": "Checkout failures across payment and inventory dependencies",
+    "summary": "Failures are intermittent across multiple services. Some requests timeout during payment authorization and others fail during inventory reservation.",
+    "affectedService": "checkout-service",
+    "severity": "critical",
+    "mode": "Auto"
+}
