@@ -13,6 +13,9 @@ BenchmarkDotNet.Artifacts/
 *.userosscache
 *.sln.docstates
 *.rsuser
+.vs/
+bin/
+obj/
 
 # Rider / JetBrains
 .idea/
