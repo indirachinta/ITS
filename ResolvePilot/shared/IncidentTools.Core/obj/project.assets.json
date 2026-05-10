@@ -1,11 +1,62 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.0": {
+      "sha512": "L3AdmZ1WOK4XXT5YFPEwyt0ep6l8lGIPs7F5OOBZc77Zqeo01Of7XXICy47628sdVl0v/owxYJTe86DTgFwKCA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 10.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\deept\\.nuget\\packages\\": {},
@@ -14,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+      "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
       "projectName": "IncidentTools.Core",
-      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+      "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
       "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
+      "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,6 +107,12 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

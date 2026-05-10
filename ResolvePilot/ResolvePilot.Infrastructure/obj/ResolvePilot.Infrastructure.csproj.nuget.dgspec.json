@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj": {}
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj",
+        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj",
         "projectName": "ResolvePilot.Application",
-        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj",
+        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj",
         "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\obj\\",
+        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj": {
-                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj"
+              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj": {
+                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj"
+              },
+              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
+                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj"
               }
             }
           }
@@ -353,14 +356,14 @@
         }
       }
     },
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj": {
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
         "projectName": "ResolvePilot.Domain",
-        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
+        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
         "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\obj\\",
+        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -380,7 +383,11 @@
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
+                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -692,14 +699,14 @@
         }
       }
     },
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj": {
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj",
         "projectName": "ResolvePilot.Infrastructure",
-        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\ResolvePilot.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -720,11 +727,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
-                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj"
+              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj": {
+                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Application\\ResolvePilot.Application.csproj"
               },
-              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
-                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj"
+              "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
+                "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj"
               }
             }
           }
@@ -748,6 +755,10 @@
             "Microsoft.Extensions.AI.OpenAI": {
               "target": "Package",
               "version": "[10.4.1, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[10.0.0, )"
             }
           },
           "imports": [
@@ -1044,14 +1055,14 @@
         }
       }
     },
-    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
+    "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+        "projectUniqueName": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
         "projectName": "IncidentTools.Core",
-        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
+        "projectPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\IncidentTools.Core.csproj",
         "packagesPath": "C:\\Users\\deept\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
+        "outputPath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\shared\\IncidentTools.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1089,6 +1100,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

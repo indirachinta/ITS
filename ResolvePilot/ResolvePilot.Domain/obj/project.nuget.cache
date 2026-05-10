@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rRkuRBYbcos=",
+  "dgSpecHash": "XqWWnKQXiqI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\deept\\source\\repos\\IncidentTraigeSystem\\ITS\\ResolvePilot\\ResolvePilot.Domain\\ResolvePilot.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deept\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.0\\microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
