@@ -1,0 +1,36 @@
+{
+    "incidentIntent": "deployment_related_failure",
+    "affectedService": "checkout-service",
+    "resolutionPath": "FAST",
+    "toolsExecuted": [
+      "get_service_logs"
+    ],
+    "toolExecutionResults": [
+      {
+        "toolName": "get_service_logs",
+        "status": "success",
+        "summary": "Logs show increased NullReferenceException after deployment v2.3.1.",
+        "evidence": [
+          "Error rate increased after deployment",
+          "Exception appears in checkout-service logs"
+        ],
+        "confidence": 0.91
+      },
+      {
+        "toolName": "fetch_docs_search",
+        "status": "planned_external_mcp_execution",
+        "summary": "External MCP tool execution is recognized but not implemented in V3.",
+        "evidence": [
+          "Tool sourceType is External",
+          "External MCP execution will be handled by a future adapter"
+        ],
+        "confidence": 0.0
+      }
+    ],
+    "resolutionSummary": "Checkout failures are likely related to a runtime issue in checkout-service. Internal log evidence is available; external MCP validation is planned for a future adapter.",
+    "recommendedAction": "Validate checkout-service error logs and prepare rollback or hotfix. External MCP docs search can be enabled in a later adapter.",
+    "confidence": 0.86,
+    "workflowRequired": false,
+    "investigationFindings": null,
+    "decisionSource": "runtime-spec-governed-ai-github-models"
+  }

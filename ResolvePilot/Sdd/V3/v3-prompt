@@ -1,0 +1,83 @@
+We are implementing V3 of ResolvePilot using Spec-Driven Development.
+
+V1 foundation exists.
+V2 added:
+- real LLM decision orchestration using Microsoft.Extensions.AI
+- GitHub Models configuration
+- runtime-spec-governed prompt
+- ToolCortex contract models
+- FAST/DEEP path decision
+
+Now V3 must add:
+- real HTTP integration to ToolCortex running as a separate API
+- shared internal tool execution using IncidentTools.Core
+- placeholder boundary for External MCP tool execution
+
+Read these first:
+- Sdd/v3-toolcortex-http-integration-spec.md
+- Sdd/v3-shared-tool-execution-spec.md
+- Sdd/v3-external-mcp-placeholder-spec.md
+- Sdd/v3-fast-resolution-spec.md
+- Sdd/v3-acceptance-criteria.md
+- Sdd/v2-toolcortex-contract-spec.md
+- Specs/*.json
+- Samples/toolcortex-request.json
+- Samples/toolcortex-response.json
+- Samples/v3-fast-response.json
+- Samples/v3-deep-response.json
+
+Required implementation:
+
+1. Replace the V2 mock ToolCortex runtime path with a real HTTP client.
+2. ToolCortex base URL must come from configuration:
+   ToolCortex:BaseUrl
+3. HTTP client should call:
+   POST /mcp/select-tools
+4. Maintain existing ToolCortex request/response contract.
+5. If ToolCortex fails in V3 POC, throw a clear exception.
+6. Do not duplicate ToolCortex scoring rules in ResolvePilot.
+
+7. In shared/IncidentTools.Core, add internal tool execution:
+   - ToolExecutionRequest
+   - ToolExecutionResult
+   - IIncidentTool
+   - IToolExecutionService
+   - mock internal tools:
+     get_service_logs
+     get_recent_deployments
+     get_service_health
+     get_service_dependencies
+
+8. Add an ExternalMcpToolExecutionPlaceholder or equivalent adapter boundary.
+   It should:
+   - recognize sourceType = External
+   - not actually execute external MCP tools
+   - return a placeholder ToolExecutionResult with status planned_external_mcp_execution
+   - explain that external MCP execution is future scope
+
+9. In ResolvePilot, execute tools only when resolutionPath = FAST.
+10. Execute max 2 recommended tools.
+11. Execute Custom tools through IncidentTools.Core.
+12. For selected External tools, return placeholder result only.
+13. Never execute rejected tools.
+14. If resolutionPath = DEEP:
+    - execute no tools
+    - do not call LangGraph
+    - return structured Component 3 handoff.
+
+15. Update ResolutionResponse to include:
+    - toolExecutionResults
+    - toolsExecuted
+    - workflowRequired
+
+16. Keep Microsoft.Extensions.AI as the model-agnostic AI layer.
+17. Keep GitHub Models configuration isolated in Infrastructure/config.
+18. Do not implement LangGraph or Component 3.
+
+After implementation, summarize:
+- files changed
+- how real ToolCortex HTTP integration works
+- how Custom vs External tools are handled
+- how IncidentTools.Core can be reused by future LangGraph component
+- how V3 acceptance criteria are satisfied
+- what remains for Day 4 publishing

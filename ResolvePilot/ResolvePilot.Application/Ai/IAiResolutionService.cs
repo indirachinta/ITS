@@ -1,19 +1,18 @@
+using IncidentTools.Core;
 using ResolvePilot.Application.Specs;
 using ResolvePilot.Domain;
 using ResolvePilot.Domain.Ai;
 using ResolvePilot.Domain.ToolCortex;
-using IncidentTools.Core;
 
-namespace ResolvePilot.Application.Prompts;
+namespace ResolvePilot.Application.Ai;
 
-public interface IPromptBuilder
+public interface IAiResolutionService
 {
-    string BuildIncidentUnderstandingPrompt(IncidentRequest request, RuntimeSpecSet runtimeSpecs);
-
-    string BuildFinalResolutionPrompt(
+    Task<AiFinalResolution> ResolveAsync(
         IncidentRequest request,
         AiIncidentUnderstanding incidentUnderstanding,
         ToolCortexResponse toolCortexResponse,
         IReadOnlyList<ToolExecutionResult> toolExecutionResults,
-        RuntimeSpecSet runtimeSpecs);
+        RuntimeSpecSet runtimeSpecs,
+        CancellationToken cancellationToken = default);
 }

@@ -5,7 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using OpenAI;
 using ResolvePilot.Application.Ai;
 using ResolvePilot.Application.Specs;
+using ResolvePilot.Application.ToolCortex;
 using ResolvePilot.Infrastructure.Ai;
+using ResolvePilot.Infrastructure.ToolCortex;
 
 namespace ResolvePilot.Infrastructure;
 
@@ -17,8 +19,20 @@ public static class ResolvePilotInfrastructureServices
         string contentRootPath)
     {
         services.AddSingleton<IRuntimeSpecLoader>(_ => new FileSystemRuntimeSpecLoader(FindSpecsPath(contentRootPath)));
-        services.AddSingleton<IAiDecisionService, AiDecisionService>();
+        services.AddSingleton<IAiIncidentUnderstandingService, AiIncidentUnderstandingService>();
+        services.AddSingleton<IAiResolutionService, AiResolutionService>();
         services.AddSingleton(BuildChatClient(configuration));
+        services.AddHttpClient<IToolCortexClient, HttpToolCortexClient>(client =>
+        {
+            string? baseUrl = configuration["ToolCortex:BaseUrl"];
+
+            if (string.IsNullOrWhiteSpace(baseUrl))
+            {
+                throw new InvalidOperationException("ToolCortex:BaseUrl configuration is required for V3 HTTP integration.");
+            }
+
+            client.BaseAddress = new Uri(baseUrl, UriKind.Absolute);
+        });
 
         return services;
     }

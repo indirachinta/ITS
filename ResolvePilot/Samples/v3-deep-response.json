@@ -1,0 +1,13 @@
+{
+    "incidentIntent": "dependency_failure",
+    "affectedService": "checkout-service",
+    "resolutionPath": "DEEP",
+    "toolsExecuted": [],
+    "toolExecutionResults": [],
+    "resolutionSummary": "This incident requires deeper multi-step investigation before confident resolution.",
+    "recommendedAction": "Route to Component 3 LangGraph investigation workflow. External MCP tools may be executed through a future adapter.",
+    "confidence": 0.68,
+    "workflowRequired": true,
+    "investigationFindings": null,
+    "decisionSource": "runtime-spec-governed-ai-github-models"
+  }

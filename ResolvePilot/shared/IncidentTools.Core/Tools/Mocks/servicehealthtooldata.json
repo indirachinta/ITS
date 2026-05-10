@@ -1,0 +1,41 @@
+{
+  "service": "checkout-api",
+  "generatedAtUtc": "2026-05-10T13:58:00Z",
+  "overallStatus": "Degraded",
+  "regions": [
+    {
+      "region": "eastus",
+      "availabilityPercent": 96.42,
+      "errorRatePercent": 4.8,
+      "p95LatencyMs": 1260
+    },
+    {
+      "region": "westus2",
+      "availabilityPercent": 98.91,
+      "errorRatePercent": 1.7,
+      "p95LatencyMs": 740
+    },
+    {
+      "region": "centralus",
+      "availabilityPercent": 99.34,
+      "errorRatePercent": 0.9,
+      "p95LatencyMs": 520
+    }
+  ],
+  "activeAlerts": [
+    {
+      "title": "checkout-api elevated 5xx",
+      "severity": "sev2",
+      "signal": "5xx rate above 3% for 10 minutes"
+    },
+    {
+      "title": "checkout submit latency regression",
+      "severity": "sev3",
+      "signal": "p95 latency above 1 second in eastus"
+    }
+  ],
+  "syntheticChecks": {
+    "checkoutProbeP95Ms": 1188,
+    "failedProbeCount": 17
+  }
+}

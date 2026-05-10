@@ -1,6 +1,6 @@
 namespace ResolvePilot.Domain;
 
-using ResolvePilot.Domain.ToolCortex;
+using IncidentTools.Core;
 
 public sealed record ResolutionResponse
 {
@@ -10,9 +10,9 @@ public sealed record ResolutionResponse
 
     public required string ResolutionPath { get; init; }
 
-    public required IReadOnlyList<RecommendedTool> RecommendedTools { get; init; }
-
     public required IReadOnlyList<string> ToolsExecuted { get; init; }
+
+    public required IReadOnlyList<ToolExecutionResult> ToolExecutionResults { get; init; }
 
     public required string ResolutionSummary { get; init; }
 

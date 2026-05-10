@@ -1,0 +1,8 @@
+{
+    "title": "Checkout API failing intermittently",
+    "summary": "Customers report intermittent checkout failures after a recent deployment to checkout-service.",
+    "affectedService": "checkout-service",
+    "incidentType": "runtime_failure",
+    "symptomType": "intermittent_api_failure",
+    "severity": "high"
+  }

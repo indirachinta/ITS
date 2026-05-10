@@ -6,7 +6,7 @@ namespace ResolvePilot.Application;
 
 public sealed class PathDecisionService
 {
-    public string Decide(IncidentRequest request, AiIncidentDecision aiDecision, ToolCortexResponse toolCortexResponse)
+    public string Decide(IncidentRequest request, AiIncidentUnderstanding incidentUnderstanding, ToolCortexResponse toolCortexResponse)
     {
         if (request.Mode == ResolutionMode.Fast)
         {
@@ -19,9 +19,9 @@ public sealed class PathDecisionService
         }
 
         bool deepTrigger =
-     aiDecision.IncidentIntent.Equals("dependency_failure", StringComparison.OrdinalIgnoreCase) ||
+     incidentUnderstanding.IncidentIntent.Equals("dependency_failure", StringComparison.OrdinalIgnoreCase) ||
      request.Severity.Equals("critical", StringComparison.OrdinalIgnoreCase) ||
-     aiDecision.Confidence < 0.75 ||
+     incidentUnderstanding.Confidence < 0.75 ||
      MentionsMultipleDependencies(request) ||
      MeanToolConfidence(toolCortexResponse) < 0.75;
 

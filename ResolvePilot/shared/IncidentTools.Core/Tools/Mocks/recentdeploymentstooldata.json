@@ -1,0 +1,59 @@
+{
+  "generatedAtUtc": "2026-05-10T13:58:00Z",
+  "deployments": [
+    {
+      "service": "checkout-api",
+      "version": "v2.3.1",
+      "finishedAtUtc": "2026-05-10T13:22:40Z",
+      "initiatedBy": "release-pipeline-prod",
+      "riskScore": 0.82,
+      "rollbackTarget": "v2.3.0",
+      "changedFiles": [
+        "src/Checkout.Api/Controllers/CheckoutController.cs",
+        "src/Checkout.Api/Payments/PaymentAuthorizationClient.cs",
+        "src/Checkout.Api/Inventory/InventoryReservationMapper.cs",
+        "charts/checkout-api/values.prod.yaml"
+      ],
+      "validationGates": [
+        {
+          "name": "unit-tests",
+          "status": "passed",
+          "details": "1840 tests passed"
+        },
+        {
+          "name": "smoke-tests",
+          "status": "warning",
+          "details": "checkout-submit p95 latency increased from 410 ms to 890 ms"
+        },
+        {
+          "name": "error-budget-check",
+          "status": "passed",
+          "details": "remaining monthly budget 71%"
+        }
+      ]
+    },
+    {
+      "service": "pricing-api",
+      "version": "v5.8.4",
+      "finishedAtUtc": "2026-05-10T12:05:12Z",
+      "initiatedBy": "release-pipeline-prod",
+      "riskScore": 0.29,
+      "rollbackTarget": "v5.8.3",
+      "changedFiles": [
+        "src/Pricing.Api/Rules/DiscountRuleEvaluator.cs"
+      ],
+      "validationGates": [
+        {
+          "name": "unit-tests",
+          "status": "passed",
+          "details": "932 tests passed"
+        },
+        {
+          "name": "smoke-tests",
+          "status": "passed",
+          "details": "all probes stable"
+        }
+      ]
+    }
+  ]
+}

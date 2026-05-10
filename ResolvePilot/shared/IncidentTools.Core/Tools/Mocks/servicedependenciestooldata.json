@@ -1,0 +1,53 @@
+{
+  "service": "checkout-api",
+  "generatedAtUtc": "2026-05-10T13:58:00Z",
+  "criticalPath": [
+    "checkout-api",
+    "payment-service",
+    "payment-gateway",
+    "bank-authorizer"
+  ],
+  "dependencies": [
+    {
+      "name": "payment-service",
+      "status": "degraded",
+      "errorRatePercent": 6.4,
+      "p95LatencyMs": 1420,
+      "recentSignals": [
+        "gateway authorization timeout",
+        "retry queue depth increasing",
+        "eastus saturation alert"
+      ]
+    },
+    {
+      "name": "inventory-service",
+      "status": "warning",
+      "errorRatePercent": 2.1,
+      "p95LatencyMs": 810,
+      "recentSignals": [
+        "reservation conflict rate elevated",
+        "cache miss rate above baseline"
+      ]
+    },
+    {
+      "name": "pricing-api",
+      "status": "healthy",
+      "errorRatePercent": 0.3,
+      "p95LatencyMs": 290,
+      "recentSignals": [
+        "normal throughput",
+        "no active alerts"
+      ]
+    },
+    {
+      "name": "customer-profile-api",
+      "status": "healthy",
+      "errorRatePercent": 0.2,
+      "p95LatencyMs": 250,
+      "recentSignals": [
+        "normal throughput",
+        "no active alerts"
+      ]
+    }
+  ]
+}

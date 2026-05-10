@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ResolvePilot.Domain\ResolvePilot.Domain.csproj" />
+    <ProjectReference Include="..\shared\IncidentTools.Core\IncidentTools.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

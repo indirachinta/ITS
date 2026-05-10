@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
+using IncidentTools.Core;
 using ResolvePilot.Application.Prompts;
-using ResolvePilot.Application.ToolCortex;
 
 namespace ResolvePilot.Application;
 
@@ -9,7 +9,8 @@ public static class ResolvePilotApplicationServices
     public static IServiceCollection AddResolvePilotApplication(this IServiceCollection services)
     {
         services.AddSingleton<IPromptBuilder, PromptBuilder>();
-        services.AddSingleton<IToolCortexClient, MockToolCortexClient>();
+        services.AddIncidentToolsCore();
+        services.AddSingleton<ExternalMcpToolExecutionPlaceholder>();
         services.AddSingleton<PathDecisionService>();
         services.AddSingleton<IIncidentResolutionEngine, IncidentResolutionEngine>();
 
