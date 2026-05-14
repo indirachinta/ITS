@@ -1,0 +1,7 @@
+{
+    "projectKey": "ITS",
+    "issueType": "Bug",
+    "priority": "High",
+    "labels": ["ai-triage", "resolvepilot", "langgraph"],
+    "status": "created"
+  }

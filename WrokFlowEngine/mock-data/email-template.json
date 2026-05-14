@@ -1,0 +1,6 @@
+{
+    "from": "resolvepilot@company.com",
+    "defaultTo": "checkout-team@example.com",
+    "subjectPrefix": "[ResolvePilot Incident]",
+    "status": "sent"
+  }
